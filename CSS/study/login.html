@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <form name="login-form" class="login-form" action="表单汇总.html" method="post" onsubmit="md5_password()">
+
+        <div class="header">
+            <h1>登陆表单</h1>
+        </div>
+
+        <div class="content">
+            <input id="username" name="username" type="text" class="input username" placeholder="Username" />
+            <div class="user-icon"></div>
+            <input id="input-password"  type="password" class="input password" placeholder="Password" />
+            <div class="pass-icon"></div>
+            <input type="hidden" name="password" id="md5-password">
+        </div>
+
+        <div class="footer">
+            <input type="submit" name="submit" value="Login" class="button" />
+            <input type="submit" name="submit" value="Register" class="register" />
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    function md5_password(){
+        let psd = document.getElementById("input-password");
+        let md5pwd = document.getElementById("md5-password");
+        md5pwd.value = md5(psd);
+        return true;
+    }
+</script>
+</body>
+
+</html>

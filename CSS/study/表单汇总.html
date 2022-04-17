@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单汇总</title>
+    <style type="text/css">
+        #div{width: 600px;height: 600px;margin:0 auto;}
+        h2{
+            color: red;
+        }
+        th{
+            color: aquamarine;
+            font-style: oblique;
+        }
+        #name{
+            color: blanchedalmond;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div">
+    <table width="600" border="1" cellpadding="2" cellspacing="0">
+        <caption>
+            <h2>Java技术学员基本信息</h2>
+        </caption>
+        <form action="../../HTML/test1.html" method="post">
+            <tr>
+                <th id="name">姓名：</th>
+                <td><input type="text" name="membername"/></td>
+            </tr>
+            <tr>
+                <th>性别：</th>
+                <td>
+                    <input type="radio" name = "sex" value="1"/>男
+                    <input type="radio" name = "sex" value="2" checked="checked"/>女
+                    <input type="radio" name = "sex" value="3"/>保密
+                </td>
+            </tr>
+            <tr>
+                <th>年龄:</th>
+                <td><input type="number" name="age" min="0" max="120" step="1"/></td>
+            </tr>
+            <tr>
+                <th>出生日期:</th>
+                <td><input type="date" name="birthday"></td>
+            </tr>
+            <tr>
+                <th>邮箱：</th>
+                <td><input type="email" name="mail"></td>
+            </tr>
+            <tr>
+                <th id="url">学校网址</th>
+                <td><input type="url" name="url"></td>
+            </tr>
+            <tr>
+                <th>国籍：</th>
+                <td><input type="text" name="mycountry" list="country">
+                <datalist id="country">
+                    <option value="中华人民共和国"></option>
+                    <option value="加拿大"></option>
+                    <option value="新西兰"></option>
+                    <option value="美国"></option>
+                </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>学历：</th>
+                <td><select name="education" >
+                    <option value="1">研究生</option>
+                    <option value="2">本科</option>
+                    <option value="3">大专</option>
+                    <option value="4">高中</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>选修课程：</th>
+                <td><input type="checkbox" name="courseinfo" value="1">SQL
+                    <input type="checkbox" name="courseinfo" value="2">web
+                    <input type="checkbox" name="courseinfo" value="3">android
+                    <input type="checkbox" name="courseinfo" value="4">java
+                </td>
+            </tr>
+            <tr>
+                <th>自我评价：</th>
+                <td><textarea name="comment" id="" cols="40" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="提交">
+                    <input type="reset" name="reset" value="重置">
+                </td>
+            </tr>
+        </form>
+    </table>
+</div>
+</body>
+</html>
